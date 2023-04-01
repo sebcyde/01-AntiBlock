@@ -1,0 +1,15 @@
+@import './Dashboard.scss';
+
+* {
+	font-family: 'Nunito Sans', sans-serif;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0%;
+}
+
+body {
+	border: 1px solid blue;
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100%;
+}
