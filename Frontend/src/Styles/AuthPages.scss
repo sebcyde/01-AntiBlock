@@ -1,0 +1,149 @@
+.SignUpContainer {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	max-width: 1440px;
+	margin: 0px auto;
+	display: flex;
+	height: 100%;
+
+	.SignUpBox {
+		background-color: $LightAccent;
+		box-shadow: 2px 2px 2px gray;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 10px;
+		width: 350px;
+		margin: 0px auto;
+		display: flex;
+		height: 450px;
+		padding: 20px;
+
+		h2 {
+			color: $SecondaryAccent;
+			font-weight: 600;
+		}
+
+		p {
+			color: gray;
+		}
+
+		input {
+			padding: 10px;
+			outline: none;
+			border: none;
+			width: 90%;
+			border-bottom: 1px solid lightgray;
+			background-color: transparent;
+
+			&::placeholder {
+				color: gray;
+			}
+
+			// &:nth-last-of-type(1) {
+			// 	display: none;
+			// }
+		}
+
+		label {
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			width: 90%;
+
+			svg {
+				color: $PrimaryAccent;
+				margin-right: 10px;
+			}
+		}
+
+		button {
+			background-color: $SecondaryAccent;
+			padding: 10px 20px;
+			cursor: pointer;
+			color: white;
+			border: none;
+			width: 90%;
+			border-radius: 5px;
+		}
+
+		.Link {
+			color: $SecondaryAccent;
+		}
+	}
+}
+
+.SignInContainer {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	max-width: 1440px;
+	margin: 0px auto;
+	display: flex;
+	height: 100%;
+
+	.SignUpBox {
+		background-color: $LightAccent;
+		box-shadow: 2px 2px 2px gray;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 10px;
+		width: 350px;
+		margin: 0px auto;
+		display: flex;
+		height: 450px;
+		padding: 20px;
+
+		h2 {
+			color: $SecondaryAccent;
+			font-weight: 600;
+		}
+
+		p {
+			color: gray;
+		}
+
+		input {
+			padding: 10px;
+			outline: none;
+			border: none;
+			width: 90%;
+			border-bottom: 1px solid lightgray;
+			background-color: transparent !important;
+
+			&::placeholder {
+				color: gray;
+			}
+		}
+
+		label {
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			width: 90%;
+
+			svg {
+				color: $PrimaryAccent;
+				margin-right: 10px;
+			}
+		}
+
+		button {
+			background-color: $SecondaryAccent;
+			padding: 10px 20px;
+			cursor: pointer;
+			color: white;
+			border: none;
+			width: 90%;
+			border-radius: 5px;
+		}
+
+		.Link {
+			color: $SecondaryAccent;
+		}
+	}
+}

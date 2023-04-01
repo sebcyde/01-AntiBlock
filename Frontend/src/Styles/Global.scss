@@ -1,4 +1,7 @@
+@import './Variables.scss';
+@import './AuthPages.scss';
 @import './Dashboard.scss';
+@import './Loading.scss';
 
 * {
 	font-family: 'Nunito Sans', sans-serif;
@@ -7,9 +10,19 @@
 	padding: 0%;
 }
 
+header {
+	background-color: #14213d !important;
+}
+
 body {
-	border: 1px solid blue;
 	max-width: 1440px;
 	margin: 0 auto;
 	height: 100%;
+}
+
+.LoadingPage {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	display: flex;
 }
