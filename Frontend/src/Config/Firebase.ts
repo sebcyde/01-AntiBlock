@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { doc, setDoc } from 'firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
 // import { getStorage } from 'firebase/storage';
+import { uuid } from 'uuidv4';
 
 import {
 	getAuth,
@@ -28,8 +29,7 @@ export const auth = getAuth(app);
 export const SignUpNewUser = async (
 	auth: any,
 	email: string,
-	password: string,
-	Username: string
+	password: string
 ) => {
 	try {
 		const UserCred = await createUserWithEmailAndPassword(
@@ -40,19 +40,21 @@ export const SignUpNewUser = async (
 		const user = UserCred.user;
 		console.log('Signed up as:', user);
 
-		// await setDoc(doc(db, `Users/${user.uid}`), {
-		// 	UserEmail: user.email,
-		// 	Username: Username,
-		// 	// DisplayPicture: DefaultImage,
-		// 	CreationDate: user.metadata.creationTime,
-		// 	UID: user.uid,
-		// 	Admin: false,
-		// 	LastSeen: Date.now(),
-		// });
+		await setDoc(doc(db, `Users/${user.uid}`), {
+			UserEmail: user.email,
 
-		// await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Lists`), {
-		// 	Favourites: [],
-		// });
+			// DisplayPicture: DefaultImage,
+			CreationDate: user.metadata.creationTime,
+			UID: user.uid,
+			Admin: false,
+			initialised: false,
+			LastSeen: Date.now(),
+		});
+
+		await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Lists`), {
+			occupation: '',
+			interests: [],
+		});
 
 		// await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Recommendations`), {
 		// 	Recommendations: [],

@@ -2,6 +2,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import React, { useState } from 'react';
 import { auth, SignInExistingUser } from '../../Config/Firebase';
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 type Props = {};
 
@@ -9,6 +10,7 @@ const SignIn = (props: Props) => {
 	const [UserPassword, setUserPassword] = useState('');
 	const [UserEmail, setUserEmail] = useState('');
 	const navigate = useNavigate();
+	const [user] = useAuthState(auth);
 
 	const LogIn = async () => {
 		await SignInExistingUser(auth, UserEmail, UserPassword);

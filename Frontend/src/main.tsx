@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ParentContainer from './Pages/ParentContainer';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 import ReactDOM from 'react-dom/client';
 import './Styles/Global.scss';
@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import { store } from '../Store/Store';
 import SignIn from './Pages/Auth/Signin';
 import SignUp from './Pages/Auth/Signup';
+import Initial from './Pages/Initial/Initial';
 
 const router = createBrowserRouter([
 	{
@@ -25,11 +26,15 @@ const router = createBrowserRouter([
 		element: <SignUp />,
 	},
 	{
+		path: '/initial',
+		element: <Initial />,
+	},
+	{
 		path: '/',
 		element: <ParentContainer />,
 		children: [
 			{
-				path: '/dashboard',
+				path: '/',
 				element: <Dashboard />,
 			},
 			{
