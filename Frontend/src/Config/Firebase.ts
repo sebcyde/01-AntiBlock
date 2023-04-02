@@ -51,21 +51,29 @@ export const SignUpNewUser = async (
 			LastSeen: Date.now(),
 		});
 
-		await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Lists`), {
-			occupation: '',
-			interests: [],
+		await setDoc(doc(db, `Users/${user.uid}/UserData/Interests`), {
+			UserInterests: [],
 		});
 
-		// await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Recommendations`), {
-		// 	Recommendations: [],
-		// });
+		await setDoc(doc(db, `Users/${user.uid}/UserData/Occupation`), {
+			UserOccupation: '',
+		});
 
-		// await setDoc(doc(db, `Users/${user.uid}/MoreInfo/Friends`), {
-		// 	Following: [],
-		// 	Followers: [],
-		// });
+		await setDoc(doc(db, `Users/${user.uid}/UserData/Ideas`), {
+			Ideas: {},
+		});
+
+		await setDoc(doc(db, `Users/${user.uid}/UserData/Exercises`), {
+			Exercises: {},
+		});
+
+		await setDoc(doc(db, `Users/${user.uid}/UserData/Settings`), {
+			Settings: {},
+		});
 
 		console.log('User Creation Successful:');
+
+		await SignInExistingUser(auth, email, password);
 	} catch (error: any) {
 		const errorCode = error.code;
 		const errorMessage = error.message;
