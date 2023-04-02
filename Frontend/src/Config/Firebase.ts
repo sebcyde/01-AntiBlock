@@ -60,11 +60,11 @@ export const SignUpNewUser = async (
 		});
 
 		await setDoc(doc(db, `Users/${user.uid}/UserData/Ideas`), {
-			Ideas: {},
+			Ideas: [],
 		});
 
 		await setDoc(doc(db, `Users/${user.uid}/UserData/Exercises`), {
-			Exercises: {},
+			Exercises: [],
 		});
 
 		await setDoc(doc(db, `Users/${user.uid}/UserData/Settings`), {
