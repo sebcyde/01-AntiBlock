@@ -21,16 +21,34 @@ export default function Navbar() {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Button color="inherit" href="/">
+					<Button color="inherit" href="/" className="navbutton">
 						Home
 					</Button>
-					<Button color="inherit" href="/create">
+					<Button color="inherit" href="/create" className="navbutton">
 						Create
 					</Button>
-					<Button color="inherit" href="/ideas">
+
+					<Button color="inherit" href="/ideas" className="navbutton">
 						Ideas
 					</Button>
-					<Button color="inherit" href="/settings">
+
+					{/* <Button color="inherit" href="/create" className="navbutton">
+						Collaborate
+					</Button> */}
+
+					<Button color="inherit" href="/exercises" className="navbutton">
+						Exercises
+					</Button>
+
+					{/* <Button color="inherit" href="/progress" className="navbutton">
+						My Progress
+					</Button> */}
+
+					{/* <Button color="inherit" href="/resources" className="navbutton">
+						Resources
+					</Button> */}
+
+					<Button color="inherit" href="/settings" className="navbutton">
 						Settings
 					</Button>
 				</Toolbar>

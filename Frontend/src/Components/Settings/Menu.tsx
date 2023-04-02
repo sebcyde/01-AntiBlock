@@ -59,28 +59,52 @@ const Menu = (props: Props) => {
 				<h2>Component Settings</h2>
 
 				<span
-					className={CurrentDisplay == 'AnimeSettings' ? 'Active' : ''}
+					className={CurrentDisplay == 'CreationSettings' ? 'Active' : ''}
 					onClick={() => {
-						dispatch(SetWindow('AnimeSettings'));
+						dispatch(SetWindow('CreationSettings'));
 					}}
 				>
-					Anime Settings
+					Creation Settings
 				</span>
 				<span
-					className={CurrentDisplay == 'StocksSettings' ? 'Active' : ''}
+					className={CurrentDisplay == 'IdeasSettings' ? 'Active' : ''}
 					onClick={() => {
-						dispatch(SetWindow('StocksSettings'));
+						dispatch(SetWindow('IdeasSettings'));
 					}}
 				>
-					Stocks Settings
+					Ideas Settings
 				</span>
 				<span
-					className={CurrentDisplay == 'GeneralSettings' ? 'Active' : ''}
+					className={CurrentDisplay == 'ExercisesSettings' ? 'Active' : ''}
 					onClick={() => {
-						dispatch(SetWindow('GeneralSettings'));
+						dispatch(SetWindow('ExercisesSettings'));
 					}}
 				>
-					General Settings
+					Exercises Settings
+				</span>
+				<span
+					className={CurrentDisplay == 'CollaborationSettings' ? 'Active' : ''}
+					onClick={() => {
+						dispatch(SetWindow('CollaborationSettings'));
+					}}
+				>
+					Collaboration Settings
+				</span>
+				<span
+					className={CurrentDisplay == 'ProgressSettings' ? 'Active' : ''}
+					onClick={() => {
+						dispatch(SetWindow('ProgressSettings'));
+					}}
+				>
+					Progress Settings
+				</span>
+				<span
+					className={CurrentDisplay == 'ResourcesSettings' ? 'Active' : ''}
+					onClick={() => {
+						dispatch(SetWindow('ResourcesSettings'));
+					}}
+				>
+					Resources Settings
 				</span>
 			</div>
 			<div className="OtherSection">

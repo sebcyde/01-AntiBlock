@@ -4,10 +4,15 @@ import UserDisplay from './UserDisplay';
 import React, { useEffect, useState } from 'react';
 import ProfileData from './WindowPages/TopLevelWindows/ProfileData';
 import Payments from './WindowPages/TopLevelWindows/Payments';
-import AnimeSettings from './WindowPages/TopLevelWindows/AnimeSettings';
-import StockSettings from './WindowPages/TopLevelWindows/StockSettings';
+import AnimeSettings from './WindowPages/TopLevelWindows/CreationSettings';
+import StockSettings from './WindowPages/TopLevelWindows/IdeasSettings';
 import GeneralSettings from './WindowPages/TopLevelWindows/GeneralSettings';
 import AccountDetails from './WindowPages/TopLevelWindows/AccountDetails';
+import IdeasSettings from './WindowPages/TopLevelWindows/IdeasSettings';
+import ExercisesSettings from './WindowPages/TopLevelWindows/ExercisesSettings';
+import CollaborationSettings from './WindowPages/TopLevelWindows/CollaborationSettings';
+import ProgressSettings from './WindowPages/TopLevelWindows/ProgressSettings';
+import ResourcesSettings from './WindowPages/TopLevelWindows/ResourcesSettings';
 
 type Props = {};
 
@@ -22,12 +27,18 @@ const SettingsWindow = (props: Props) => {
 			setDisplay(<AccountDetails />);
 		} else if (CurrentWindow.Window == 'Payments') {
 			setDisplay(<Payments />);
-		} else if (CurrentWindow.Window == 'AnimeSettings') {
+		} else if (CurrentWindow.Window == 'CreationSettings') {
 			setDisplay(<AnimeSettings />);
-		} else if (CurrentWindow.Window == 'StocksSettings') {
-			setDisplay(<StockSettings />);
-		} else if (CurrentWindow.Window == 'GeneralSettings') {
-			setDisplay(<GeneralSettings />);
+		} else if (CurrentWindow.Window == 'IdeasSettings') {
+			setDisplay(<IdeasSettings />);
+		} else if (CurrentWindow.Window == 'ExercisesSettings') {
+			setDisplay(<ExercisesSettings />);
+		} else if (CurrentWindow.Window == 'CollaborationSettings') {
+			setDisplay(<CollaborationSettings />);
+		} else if (CurrentWindow.Window == 'ProgressSettings') {
+			setDisplay(<ProgressSettings />);
+		} else if (CurrentWindow.Window == 'ResourcesSettings') {
+			setDisplay(<ResourcesSettings />);
 		}
 	}, [CurrentWindow]);
 

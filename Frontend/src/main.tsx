@@ -15,6 +15,7 @@ import { store } from '../Store/Store';
 import SignIn from './Pages/Auth/Signin';
 import SignUp from './Pages/Auth/Signup';
 import Initial from './Pages/Initial/Initial';
+import Exercises from './Pages/Exercises/Exercises';
 
 const router = createBrowserRouter([
 	{
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 			{
 				path: '/create',
 				element: <Create />,
+			},
+			{
+				path: '/exercises',
+				element: <Exercises />,
 			},
 			{
 				path: '/settings',
